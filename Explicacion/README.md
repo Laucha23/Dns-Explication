@@ -20,7 +20,31 @@ El resultado de esta fueron varias ideas acerca del espacio de nombres y su gest
 
 Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos más allá de lo que DNS describe aquí. El término nombre de dominio se utiliza muy a menudo para referirse a un nombre con una estructura indicada por puntos, sin relación alguna con DNS. Esto se cumple en el direccionamiento de correo electrónico. 
 
+### Ataques a DNS
 
+Que la enumeracion de los dns sea posible es una vulnerabilidad clave, ya que con este pueden sacar mucha informacion sobre nuetro sitio web.
+
+Se Pueden enumerar los DNS por medio de ataques de fuerza de bruta, transferencia de zona, resolucion inversa de registros.
+
+#### DNS cache snooping 
+
+Los atacantes pueden envenenar un caché de DNS engañando a los solucionadores de DNS con información falsa de almacenamiento de caché, con el resultado de que el solucionador envíe la dirección IP equivocada a los clientes, y los usuarios intenten navegar a un sitio web que se dirigirá al sitio equivocado.
+
+El envenenamiento de caché de DNS consiste en introducir información falsa en una caché DNS, para que las consultas de DNS devuelvan una respuesta incorrecta y se dirija a los usuarios a sitios web equivocados. El envenenamiento de caché de DNS también se conoce como "suplantación de DNS". Las direcciones IP son los "números de habitación" de Internet y habilitan el tráfico para llegar hasta los lugares adecuados. Las cachés del solucionador de DNS son el "directorio de las instalaciones". Cuando almacenan información errónea, el tráfico se dirige a sitios equivocados, hasta que se corrige la información almacenada en caché. (Debe tenerse en cuenta que esto no desconecta realmente a los sitios web de sus direcciones IP reales)
+
+Este procedimiento le permite a un atacante consultar servidores DNS sobre algunos dominios en especifico  
+
+#### Tranferencia de Zona
+
+Es un tipo de transacción de DNS. Es uno de varios mecanismos disponibles para administradores para replicar bases de datos DNS a través de un conjunto de servidores DNS.
+
+suelen ser utilizados por los atacantes para recolectar información acerca de la infraestructura y subdominios de la posible víctima –aunque existen herramientas automatizadas para hacerlo, como por ejemplo Dnsnum. De esta última vemos una captura de pantalla a continuación:
+
+<img src="dnsenum.jpg">
+
+Puede verse con claridad cómo con solo indicarle unos pocos parámetros (en este caso –enum para enumerar la información) ya comienza con la recolección de información, no solamente de los servidores DNS sino también haciendo búsquedas en Internet. Si bien hace todo por sí sola con solo indicarle el dominio, debe comprenderse cómo funciona por detrás.
+Una transferencia de zona utiliza el protocolo TCP para el transporte, y toma la forma de una transacción de cliente-servidor. El cliente que solicita una transferencia de zona puede ser un servidor esclavo o servidor secundario, que solicita datos de un servidor maestro, a veces llamado un servidor primario. La parte de la base de datos que se replica es una zona.
+Este ataque pretende hacernos pasar por un servidor secundario, solicitar una transferencia de zona, lo que nos permitira visualizar los subdominios de nuestro objetivo
 
 
 ### Donde se guardan los registros
