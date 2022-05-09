@@ -103,10 +103,10 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 
 ## Bibliografia 
 
-<A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/"></A>
-<A HREF="https://www.cloudflare.com/es-es/learning/dns/what-is-dns/"></A>
-<A HREF="https://ginzo.tech/blog/ataque-dns/"></A>
-<A HREF="https://es.wikipedia.org/wiki/Ataque_de_denegaci%C3%B3n_de_servicio"></A>
-<A HREF="https://www.welivesecurity.com/la-es/2015/06/17/trata-ataque-transferencia-zona-dns/"></A>
-<A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf"></A>
+<A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/">Dns Cache Snooping</A>
+<A HREF="https://www.cloudflare.com/es-es/learning/dns/what-is-dns/">Que es DNS</A>
+<A HREF="https://ginzo.tech/blog/ataque-dns/">Ataques DNS</A>
+<A HREF="https://es.wikipedia.org/wiki/Ataque_de_denegaci%C3%B3n_de_servicio">Ataques DDos</A>
+<A HREF="https://www.welivesecurity.com/la-es/2015/06/17/trata-ataque-transferencia-zona-dns/">Ataque de transferencia de zona dns</A>
+<A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf">Dns cache Snoping v2</A>
 
