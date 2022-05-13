@@ -48,22 +48,29 @@ Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos
 
 Son aquellos ataques dirigidos para afectar o modificar el funcionamiento de un servidor DNS. Los ataques a DNS tienen varias formas, que pueden ocasionar diversas repercusiones según su tipo. Los mas populares son:
 
-### Ataque por Dominio Fantasma
+### Ataque DDos/ Dos
+
+Los ataques de denegacion de servicio son 
+
+es un ataque a un sistema de computadoras o red que causa que un servicio o recurso sea inaccesible a los usuarios legítimos.1​ Normalmente provoca la pérdida de la conectividad con la red por el consumo del ancho de banda de la red de la víctima o sobrecarga de los recursos computacionales del sistema atacado. 
+
+
+##### Ataque por Dominio Fantasma
 
 Es un tipo de ataque DDoS que se realiza configurando un grupo de servidores DNS que no responden a las solicitudes o lo hacen lentamente, impidiendo las comunicaciones.
 
 Cuando un servidor DNS no conoce una direccion IP, se encargara de buscar la dirección en otros servidores DNS conectados, utilizando la recursividad.
 Los ataques de dominio fantasma son un metodo para interrumpir este proceso de busqueda que realiza el servidor, desperdiciando los recursos del servidor en busquedas no funcionales, llegando hasta el punto de consumir todos los recursos posibles. Entonces, el servidor ignorara las consultas legitimas y seguira centrandose en otros servidores que no responden. 
 
-### Ataque por bloqueo
+##### Ataque por bloqueo
 
 Es un tipo de ataque en formato DDos con dominios y resolutores especiales configurados interrumpiendo la comunicacion entre el servidor y el cliente. EN vez de enviar la respuesta correcta, respondecon paquetes de datos aleatorios, manteniendo al servidor ocupado esperando una respuesta correcta que nunca llega, agotando la reserva de conexiones disponibles.
 
-### Ataque por inundacion
+##### Ataque por inundacion
 
 Es un tipo de ataque del tipo DDos en el cual los intrusos inundan los servidores DNS de un dominio determinado en un intento por interrumpir la resolucion DNS. Si se interrumpe, se compromete la capacidad de respuesta al trafico legitimo.  
 
-#### Ataque por espionaje del caché
+##### Ataque por espionaje del caché
 
 En este ataque, los atacantes envenenan el caché de un DNS engañando a sus solucionadores con informacion falsa de almacenamiento caché, teniendo como resultado al solucionador enviando la direccion IP equivocada a los clientes, derivando en ellos navegando en un sitio WEB equivocado.
 
@@ -71,11 +78,8 @@ Las direcciones IP son los "números de habitación" de Internet y habilitan el 
 
 Este procedimiento permite que un atacante consulte sobre algunos dominios especificos en servidores DNS.
 
-#### Ataque DDos/ Dos
 
-
-
-#### Tranferencia de Zona
+### Tranferencia de Zona
 
 Es un tipo de transacción de DNS. Es uno de varios mecanismos disponibles para administradores para replicar bases de datos DNS a través de un conjunto de servidores DNS.
 
