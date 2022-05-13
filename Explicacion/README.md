@@ -18,7 +18,6 @@ Para entender el proceso de la resolución de DNS, es importante conocer los dif
 
 #### Los servidores por los que pasa
 
-
 1. Recursor de DNS: es como un bibliotecario al que se le pide que busque un libro determinado en la biblioteca. El recursor DNS es un servidor diseñado para recibir consultas desde equipos cliente mediante aplicaciones como navegadores web. Normalmente, el recursor será el responsable de hacer solicitudes adicionales para satisfacer la consulta de DNS del cliente.
     
 2. Servidor de nombres raíz: es el primer paso para traducir (solucionar) los nombres de servidor legibles en direcciones IP. Se puede comparar a un índice en una biblioteca que apunta a diferentes estanterías de libros. Generalmente sirve como referencia de otras ubicaciones más específicas.
@@ -47,17 +46,34 @@ Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos
 
 ### Ataques a DNS
 
-Son aquellos ataques dirigidos a afectar o modificar el funcionamiento de un servidor DNS. El ataque al DNS no tiene un solo modo, sino que podría ocasionar diversas repercusiones según su tipo. Puede inhabilitar el acceso a un sitio web o clonar el mismo a fin de extraer datos de acceso gracias a sus usuarios. Del mismo modo, puede redirigir a usuarios a otros portales o ser el inicio para un ataque de mayor repercusión.
+Son aquellos ataques dirigidos para afectar o modificar el funcionamiento de un servidor DNS. Los ataques a DNS tienen varias formas, que pueden ocasionar diversas repercusiones según su tipo. Los mas populares son:
 
-#### DNS cache snooping 
+### Ataque por Dominio Fantasma
 
-Los atacantes pueden envenenar un caché de DNS engañando a los solucionadores de DNS con información falsa de almacenamiento de caché, con el resultado de que el solucionador envíe la dirección IP equivocada a los clientes, y los usuarios intenten navegar a un sitio web que se dirigirá al sitio equivocado.
+Es un tipo de ataque DDoS que se realiza configurando un grupo de servidores DNS que no responden a las solicitudes o lo hacen lentamente, impidiendo las comunicaciones.
 
-El envenenamiento de caché de DNS consiste en introducir información falsa en una caché DNS, para que las consultas de DNS devuelvan una respuesta incorrecta y se dirija a los usuarios a sitios web equivocados. El envenenamiento de caché de DNS también se conoce como "suplantación de DNS". Las direcciones IP son los "números de habitación" de Internet y habilitan el tráfico para llegar hasta los lugares adecuados. Las cachés del solucionador de DNS son el "directorio de las instalaciones". Cuando almacenan información errónea, el tráfico se dirige a sitios equivocados, hasta que se corrige la información almacenada en caché. (Debe tenerse en cuenta que esto no desconecta realmente a los sitios web de sus direcciones IP reales)
+Cuando un servidor DNS no conoce una direccion IP, se encargara de buscar la dirección en otros servidores DNS conectados, utilizando la recursividad.
+Los ataques de dominio fantasma son un metodo para interrumpir este proceso de busqueda que realiza el servidor, desperdiciando los recursos del servidor en busquedas no funcionales, llegando hasta el punto de consumir todos los recursos posibles. Entonces, el servidor ignorara las consultas legitimas y seguira centrandose en otros servidores que no responden. 
 
-Este procedimiento le permite a un atacante consultar servidores DNS sobre algunos dominios en especifico  
+### Ataque por bloqueo
+
+Es un tipo de ataque en formato DDos con dominios y resolutores especiales configurados interrumpiendo la comunicacion entre el servidor y el cliente. EN vez de enviar la respuesta correcta, respondecon paquetes de datos aleatorios, manteniendo al servidor ocupado esperando una respuesta correcta que nunca llega, agotando la reserva de conexiones disponibles.
+
+### Ataque por inundacion
+
+Es un tipo de ataque del tipo DDos en el cual los intrusos inundan los servidores DNS de un dominio determinado en un intento por interrumpir la resolucion DNS. Si se interrumpe, se compromete la capacidad de respuesta al trafico legitimo.  
+
+#### Ataque por espionaje del caché
+
+En este ataque, los atacantes envenenan el caché de un DNS engañando a sus solucionadores con informacion falsa de almacenamiento caché, teniendo como resultado al solucionador enviando la direccion IP equivocada a los clientes, derivando en ellos navegando en un sitio WEB equivocado.
+
+Las direcciones IP son los "números de habitación" de Internet y habilitan el tráfico para llegar hasta los lugares adecuados. Los cachés del solucionador de DNS son los encargados de direccionarte en las "instalaciones". Cuando almacenan información errónea, el tráfico se dirige a sitios equivocados, hasta que se corrige la información almacenada en caché (Debe tenerse en cuenta que esto no desconecta realmente a los sitios web de sus direcciones IP reales).
+
+Este procedimiento permite que un atacante consulte sobre algunos dominios especificos en servidores DNS.
 
 #### Ataque DDos/ Dos
+
+
 
 #### Tranferencia de Zona
 
@@ -69,7 +85,7 @@ suelen ser utilizados por los atacantes para recolectar información acerca de l
 
 Puede verse con claridad cómo con solo indicarle unos pocos parámetros (en este caso –enum para enumerar la información) ya comienza con la recolección de información, no solamente de los servidores DNS sino también haciendo búsquedas en Internet. Si bien hace todo por sí sola con solo indicarle el dominio, debe comprenderse cómo funciona por detrás.
 Una transferencia de zona utiliza el protocolo TCP para el transporte, y toma la forma de una transacción de cliente-servidor. El cliente que solicita una transferencia de zona puede ser un servidor esclavo o servidor secundario, que solicita datos de un servidor maestro, a veces llamado un servidor primario. La parte de la base de datos que se replica es una zona.
-Este ataque pretende hacernos pasar por un servidor secundario, solicitar una transferencia de zona, lo que nos permitira visualizar los subdominios de nuestro objetivo
+Este ataque pretende hacernos pasar por un servidor secundario, solicitar una transferencia de zona, lo que nos permitira visualizar los subdominios de nuestro objetivo.
 
 ---
 
