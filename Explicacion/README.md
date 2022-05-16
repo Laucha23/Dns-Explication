@@ -44,7 +44,7 @@ Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos
 
 ---
 
-#### ARGENTINA y el .ar
+#### Argentina y el .ar
 
 En Argentina los dominios en internet con extension .ar son registrados en la NIC Argentina, estos se describen como la Dirección Nacional del Registro de Dominios de Internet, ellos trabajan bajo la órbita de la Secretaría Legal y Técnica de la Presidencia de la Nación.  
 
@@ -52,7 +52,7 @@ Su propósito es brindar un servicio eficiente en tanto administradores del regi
 
 La NIC proporciona toda la informacion publica de los dns regitrados en Argentina
 
-#### Ejemplo de Huergo
+#### Ejemplo del Huergo
 
 Podemos usar un comando en linux(whois <dominio>) o buscar paginas como <A HREF="https://nic.ar/whois">NIC whois</A>
 
