@@ -44,6 +44,27 @@ Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos
 
 ---
 
+#### Como funcionan los servidores DNS
+
+La resolución de nombres utiliza una estructura en árbol, mediante la cual los diferentes servidores DNS de las zonas de autoridad se encargan de resolver las direcciones de su zona, y sino se lo solicitan a otro servidor que creen que conoce la dirección.
+
+
+##### Paso a paso: Servidores
+
+. Tecleamos en nuestro navegador www.xatakaon.com
+. Nuestro Sistema Operativo comprueba la petición y ve que no tiene en su memoria caché la dirección de ese dominio, entonces realiza la petición al servidor DNS configurado manualmente o mediante DHCP.
+. El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
+
+. El servidor encargado de la zona de autoridad .com tiene una tabla de datos en los que están almacenados las direcciones IP de las máquinas y sus dominios. Lo busca y le responde al servidor DNS que está almacenado en la máquina con dirección amazon-gw.ip4.tinet.net (77.67.82.130).
+
+. Es entonces cuando el servidor DNS que tenemos configurado realiza una petición a amazon-gw.ip4.tinet.net para saber en qué parte de su máquina (recordad que una máquina puede alojar varias páginas) está www.xatakaon.com
+
+. El servidor donde está la página alojada busca en su tabla de correspondencias y le responde diciendo que está en la dirección IP 178.236.0.213.
+
+. Es entonces cuando 178.236.0.213 le devuelve la consulta a nuestra aplicación (navegador en esta ocasión) y se comienzan a intercambiar paquetes para procesar el proceso.    
+
+---
+
 #### Argentina y el .ar
 
 En Argentina los dominios en internet con extension .ar son registrados en la NIC Argentina, estos se describen como la Dirección Nacional del Registro de Dominios de Internet, ellos trabajan bajo la órbita de la Secretaría Legal y Técnica de la Presidencia de la Nación.  
@@ -95,6 +116,9 @@ Este procedimiento permite que un atacante consulte sobre algunos dominios espec
 Ataque Dos o Denial of service, es un ataque traducido al castellano como Denegacion de servicios, como su nombre indica se encarga de que el servicio corriendo caiga de la red a traves de una masiva entrega de paquetes.
 
 Porque se distingue DDos y Dos, porque en el Dos attack una persona se encarga del envio masivo, en cambio en DDos attack, muchas maquinas, por lo general botnets(red de bots), se encargan de los envios, este ultimo es mas efectivo contra proyectos medianos a grandes, ya que el envio masivo se multiplica por cada maquina y podemos llegar a generar hasta gb de envios con las suficientes maquinas.
+
+---
+
 
 ---
 
