@@ -120,19 +120,21 @@ Porque se distingue DDos y Dos, porque en el Dos attack una persona se encarga d
 
 ### Proteccion a Ataques DNS
 
+Son muchos los tipos de virus, malware y demás elementos que pueden afectar a nuestra seguridad. Es imprescindible tener los equipos y los servidores web protegidos.
+
 #### Sistemas actualizados
 
-Algo muy importante para evitar este tipo de ataque y cualquier otro similar es tener los sistemas correctamente actualizados. Son muchas las vulnerabilidades que pueden surgir y que son aprovechadas por los piratas informáticos para llevar a cabo sus ataques. Necesitamos tener los equipos con todos los parches y correctamente actualizados. Así evitaremos que los piratas informáticos se aprovechen de esos errores.
+Es recomendable tener los sistemas correctamente actualizados. Son muchas las vulnerabilidades que son aprovechadas por los hackers para llevar a cabo sus ataques. Tener los equipos con todos los parches instalados y actualizados correctamente, ayuda a evitar que se aprovechen de las vulnerabilidades. 
 
 #### Herramientas de seguridad
 
-Otra cuestión fundamental para evitar ataques DNS es tener siempre los sistemas protegidos. Para ello podemos utilizar antivirus, pero especialmente es importante el uso de firewall. Un cortafuegos va a ayudar a rechazar conexiones fraudulentas que apunten contra nuestro servidor, ordenador o cualquier dispositivo.
+Tener siempre los sistemas protegidos. Podemos utilizar antivirus, pero especialmente es importante el uso de firewall. Un cortafuegos va a ayudar a rechazar conexiones fraudulentas que apunten contra nuestro servidor, ordenador o cualquier dispositivo.
 
-#### Usar conexiones seguras y cifradas
+#### Uso de conexiones seguras y cifradas
 
-Siempre que naveguemos por Internet debemos ser conscientes de utilizar conexiones que sean seguras. A veces nos conectamos a través de redes Wi-Fi públicas que pueden ser un peligro para nuestra privacidad y podríamos estar navegando además por redes que han sufrido un ataque DNS. Esto podría provocar que entremos en páginas que han sido modificadas o seamos redireccionados.
+Utilizar conexiones que sean seguras. A veces nos conectamos a través de redes Wi-Fi públicas que pueden ser un peligro para nuestra privacidad y podríamos estar navegando además por redes que han sufrido un ataque DNS. Esto podría provocar que entremos en páginas que han sido modificadas o seamos redireccionados.
 
-#### Contar con una VPN
+#### Uso de VPN
 
 Para evitar que se filtre información personal, datos de nuestra navegación, al navegar por Internet especialmente en redes inseguras podemos utilizar programas VPN. Son muy útiles para preservar en todo momento nuestra privacidad. Las hay para dispositivos móviles y equipos de escritorio. Además podemos usarlas tanto gratuitas como de pago.
 
