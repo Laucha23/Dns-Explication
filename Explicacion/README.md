@@ -49,11 +49,10 @@ Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos
 La resolución de nombres utiliza una estructura en árbol, mediante la cual los diferentes servidores DNS de las zonas de autoridad se encargan de resolver las direcciones de su zona, y sino se lo solicitan a otro servidor que creen que conoce la dirección.
 
 
-##### Paso a paso: Servidores
+##### Paso a paso: Servidores DNS
 
 . Tecleamos en nuestro navegador www.xatakaon.com
 . Nuestro Sistema Operativo comprueba la petición y ve que no tiene en su memoria caché la dirección de ese dominio, entonces realiza la petición al servidor DNS configurado manualmente o mediante DHCP.
-. El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
 
 . El servidor encargado de la zona de autoridad .com tiene una tabla de datos en los que están almacenados las direcciones IP de las máquinas y sus dominios. Lo busca y le responde al servidor DNS que está almacenado en la máquina con dirección amazon-gw.ip4.tinet.net (77.67.82.130).
 
@@ -119,6 +118,23 @@ Porque se distingue DDos y Dos, porque en el Dos attack una persona se encarga d
 
 ---
 
+### Proteccion a Ataques DNS
+
+#### Sistemas actualizados
+
+Algo muy importante para evitar este tipo de ataque y cualquier otro similar es tener los sistemas correctamente actualizados. Son muchas las vulnerabilidades que pueden surgir y que son aprovechadas por los piratas informáticos para llevar a cabo sus ataques. Necesitamos tener los equipos con todos los parches y correctamente actualizados. Así evitaremos que los piratas informáticos se aprovechen de esos errores.
+
+#### Herramientas de seguridad
+
+Otra cuestión fundamental para evitar ataques DNS es tener siempre los sistemas protegidos. Para ello podemos utilizar antivirus, pero especialmente es importante el uso de firewall. Un cortafuegos va a ayudar a rechazar conexiones fraudulentas que apunten contra nuestro servidor, ordenador o cualquier dispositivo.
+
+#### Usar conexiones seguras y cifradas
+
+Siempre que naveguemos por Internet debemos ser conscientes de utilizar conexiones que sean seguras. A veces nos conectamos a través de redes Wi-Fi públicas que pueden ser un peligro para nuestra privacidad y podríamos estar navegando además por redes que han sufrido un ataque DNS. Esto podría provocar que entremos en páginas que han sido modificadas o seamos redireccionados.
+
+#### Contar con una VPN
+
+Para evitar que se filtre información personal, datos de nuestra navegación, al navegar por Internet especialmente en redes inseguras podemos utilizar programas VPN. Son muy útiles para preservar en todo momento nuestra privacidad. Las hay para dispositivos móviles y equipos de escritorio. Además podemos usarlas tanto gratuitas como de pago.
 
 ---
 
@@ -181,3 +197,5 @@ de transferencia de zona dns</A>
 <br>
 <A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf">Dns cache Snoping v2</A>
 
+
+. El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
