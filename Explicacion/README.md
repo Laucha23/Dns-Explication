@@ -43,6 +43,22 @@ El resultado de esta fueron varias ideas acerca del espacio de nombres y su gest
 Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos más allá de lo que DNS describe aquí. El término nombre de dominio se utiliza muy a menudo para referirse a un nombre con una estructura indicada por puntos, sin relación alguna con DNS. Esto se cumple en el direccionamiento de correo electrónico. 
 
 ---
+### ARGENTINA y el .ar
+
+En Argentina los dominios en internet con extension .ar son registrados en la NIC Argentina, estos se describen como la Dirección Nacional del Registro de Dominios de Internet, ellos trabajan bajo la órbita de la Secretaría Legal y Técnica de la Presidencia de la Nación.  
+
+Su propósito es brindar un servicio eficiente en tanto administradores del registro de dominios ‘.ar’ y facilitar el acceso de todas las personas, en igualdad de condiciones, a una internet segura y confiable como una de las claves para el desarrollo del país.
+
+La NIC proporciona toda la informacion publica de los dns regitrados en Argentina
+
+#### Ejemplo de Huergo
+
+Podemos usar un comando en linux(whois <dominio>) o buscar paginas como <A HREF="https://nic.ar/whois">NIC whois</A>
+
+<img src="whois.jpeg">
+
+
+Podemos tener toda la informacion sobre el DNS del Huergo.
 
 ### Ataques a DNS
 
@@ -72,6 +88,10 @@ Las direcciones IP son los "números de habitación" de Internet y habilitan el 
 Este procedimiento permite que un atacante consulte sobre algunos dominios especificos en servidores DNS.
 
 #### Ataque DDos/ Dos
+
+Ataque Dos o Denial of service, es un ataque traducido al castellano de Denegacion de servicios, como su nombre indica se encarga de que el servicio corriendo caiga de la red a traves de una masiva entrega de paquetes
+
+Porque se distingue DDos y Dos, porque en el Dos attack una persona se encarga del envio masivo, en cambio en DDos attack, muchas maquinas, por lo general botnets(red de bots), se encargan de los envios, este ultimo es mas efectivo contra proyectos medianos a grandes, ya que el envio masivo se multiplica por cada maquina y podemos llegar a generar hasta gb de envios con las suficientes maquinas.
 
 
 
