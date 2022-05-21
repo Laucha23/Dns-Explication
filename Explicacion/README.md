@@ -30,7 +30,8 @@ Para entender el proceso de la resolución de DNS, es importante conocer los dif
 
 ### Historia 
 
-El mapeo de las direcciones a nombres de host estaban gestionados por el Network Information Center (NIC) en un sólo fichero (HOSTS.TXT), el cual fue distribuido a todos los hosts mediante FTP. El ancho de banda de red total consumido en la distribución de este escenario es proporcional al cuadrado del número de hosts en la red. 
+
+El mapeo de las direcciones a nombres de host estaba gestionado por el Network Information Center (NIC) en un sólo fichero (HOSTS.TXT), el cual fue distribuido a todos los hosts mediante FTP. El ancho de banda de red total consumido en la distribución de este escenario es proporcional al cuadrado del número de hosts en la red. 
 
 Incluso cuando se utilizan múltiples niveles de FTP, la carga de salida FTP en los NIC de los hosts es considerable. No se tuvo una buena previsión del futuro y explosivo crecimiento en el número de hosts.
 
@@ -77,7 +78,6 @@ La NIC proporciona toda la informacion publica de los dns regitrados en Argentin
 Podemos usar un comando en linux(whois <dominio>) o buscar paginas como <A HREF="https://nic.ar/whois">NIC whois</A>
 
 <img src="whois.jpeg">
-
 
 Podemos tener toda la informacion sobre el DNS del Huergo.
 
@@ -151,6 +151,24 @@ Una transferencia de zona utiliza el protocolo TCP para el transporte, y toma la
 Este ataque pretende hacernos pasar por un servidor secundario, solicitar una transferencia de zona, lo que nos permitira visualizar los subdominios de nuestro objetivo.
 
 ---
+	
+#### Whois
+	
+Whois es un protocolo de consulta y respuesta basado en TCP que se usa comúnmente para proporcionar servicios de información a los usuarios de Internet. Devuelve información sobre los nombres de dominio registrados, un bloque de direcciones IP, servidores de nombres y una gama mucho más amplia de servicios de información.
+
+El sistema whois es una lista de registros que contiene detalles sobre la propiedad de los dominios y los propietarios. La  Corporación de Internet para la Asignación de Nombres y Números (ICANN) regula el registro y la propiedad de los nombres de dominio, pero la lista de registros está en manos de muchas empresas.
+
+Cualquiera puede consultar la lista de registros. Cuando lo haga, uno de los registros manejará su solicitud y le enviará los detalles del registro whois apropiado.
+
+Explicacion de terminos:
+
+Registro: Una empresa que administra una lista que contiene un conjunto de nombres de dominio (hay muchos de estos).
+	
+Registrante: El propietario legal del dominio; está registrado a nombre de esta persona.
+	
+Registrador: Un registrante utiliza un registrador para hacer su registro.
+	
+---
 
 ### Donde se guardan los registros DNS
 
@@ -182,8 +200,8 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 
 ---
 
-### Presentación
-
+#### Presentación
+	
 <A HREF="https://www.canva.com/design/DAFBL2i1dtY/8K_zImrwXF0Rlc0fNQTaNA/view">Presentacion en Canva</A>
 <br>
 
@@ -191,7 +209,7 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 	
 ### Bibliografia 
 
-<A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/">Dns Cache Snooping</A>
+<A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/">DNS Cache Snooping</A>
 <br>
 <A HREF="https://www.cloudflare.com/es-es/learning/dns/what-is-dns/">Que es DNS</A>
 <br>
@@ -200,9 +218,16 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 <A HREF="https://es.wikipedia.org/wiki/Ataque_de_denegaci%C3%B3n_de_servicio">Ataques DDos</A>
 <br>
 <A HREF="https://www.welivesecurity.com/la-es/2015/06/17/trata-ataque-transferencia-zona-dns/">Ataque 
-de transferencia de zona dns</A>
+de transferencia de zona</A>
 <br>
-<A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf">Dns cache Snoping v2</A>
-
-
+<A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf">DNS Cache Snoping v2</A>
+<br>
+<A HREF="https://www.redeszone.net/tutoriales/seguridad/consejos-evitar-ataques-dns/">Evitar ataques DNS</A>
+<br>
+<A HREF="https://www.redeszone.net/tutoriales/seguridad/tipos-ataques-dns-como-prevenirlos/">Tipos de ataques a servidores DNS</A>
+<br>
+<A HREF="https://www.howtogeek.com/680086/how-to-use-the-whois-command-on-linux/">Como usar el comando Whois</A>
+	
 El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
+
+	
