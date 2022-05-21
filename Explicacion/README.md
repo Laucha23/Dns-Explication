@@ -182,6 +182,13 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 
 ---
 
+### Presentación
+
+<A HREF="https://www.canva.com/design/DAFBL2i1dtY/8K_zImrwXF0Rlc0fNQTaNA/view">Presentacion en Canva</A>
+<br>
+
+---
+	
 ### Bibliografia 
 
 <A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/">Dns Cache Snooping</A>
