@@ -191,7 +191,7 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 	
 ### Bibliografia 
 
-<A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/">Dns Cache Snooping</A>
+<A HREF="https://www.cloudflare.com/es-es/learning/dns/dns-cache-poisoning/">DNS Cache Snooping</A>
 <br>
 <A HREF="https://www.cloudflare.com/es-es/learning/dns/what-is-dns/">Que es DNS</A>
 <br>
@@ -200,9 +200,15 @@ Este ataque pretende hacernos pasar por un servidor secundario, solicitar una tr
 <A HREF="https://es.wikipedia.org/wiki/Ataque_de_denegaci%C3%B3n_de_servicio">Ataques DDos</A>
 <br>
 <A HREF="https://www.welivesecurity.com/la-es/2015/06/17/trata-ataque-transferencia-zona-dns/">Ataque 
-de transferencia de zona dns</A>
+de transferencia de zona</A>
 <br>
 <A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf">Dns cache Snoping v2</A>
+<br>
+<A HREF="https://www.redeszone.net/tutoriales/seguridad/consejos-evitar-ataques-dns/">Protección a ataques DNS</A>
+<br>
+<A HREF="https://www.redeszone.net/tutoriales/seguridad/tipos-ataques-dns-como-prevenirlos/">Tipos de ataques a servidores</A>
+<br>
+<A HREF="https://www.howtogeek.com/680086/how-to-use-the-whois-command-on-linux/">Comando Whois</A>
 
 
 El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
