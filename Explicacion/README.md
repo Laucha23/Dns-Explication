@@ -1,12 +1,12 @@
 ## DNS 
 
-Domain name system
+Domain Name System
 
 ---
 
 ### Objetivo 
 	
-El objetivo principal es un espacio de nombres consistente que sea utilizado para referirse a los recursos. Para evitar problemas causados por extensiones especiales, los nombres no necesitarán contener identificadores de red, direccines, rutas o información similar como parte del nombre.
+El objetivo principal es un espacio de nombres consistente que sea utilizado para referirse a los recursos. Para evitar problemas causados por extensiones especiales, los nombres no necesitarán contener identificadores de red, direcciones, rutas o información similar como parte del nombre.
 
 ---
 
@@ -32,7 +32,7 @@ Para entender el proceso de la resolución de DNS, es importante conocer los dif
 
 El mapeo de las direcciones a nombres de host están gestionados por el Network Information Center (NIC) en un sólo fichero (HOSTS.TXT), el cual fue distribuido a todos los hosts mediante FTP. El ancho de banda de red total consumido en la distribución de este escenario es proporcional al cuadrado del número de hosts en la red. 
 
-Incluso cuando se utilizan múltiples niveles de FTP, la carga de salida FTP en los NIC de los 	hosts es considerable. No se tuvo una buena previsión del futuro y explosivo crecimiento en el número de hosts.
+Incluso cuando se utilizan múltiples niveles de FTP, la carga de salida FTP en los NIC de los hosts es considerable. No se tuvo una buena previsión del futuro y explosivo crecimiento en el número de hosts.
 
 De la misma manera ocurrió con las redes. Los hosts de la ARPANET original fueron sustituidos por redes locales de estaciones de trabajo. Las organizaciones administraron localmente sus propios nombres y direcciones, pero tuvieron que esperar bastante al NIC para que HOSTS.TXT estuviera actualizado con esos cambios en Internet. Las organizaciones también querían alguna estructura local en el espacio de nombres.
 
@@ -49,14 +49,14 @@ Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos
 La resolución de nombres utiliza una estructura en árbol, mediante la cual los diferentes servidores DNS de las zonas de autoridad se encargan de resolver las direcciones de su zona, y sino se lo solicitan a otro servidor que creen que conoce la dirección.
 
 
-##### Paso a paso: Servidores DNS
+#### Paso a paso: Servidores DNS
 
 . Tecleamos en nuestro navegador www.xatakaon.com
 . Nuestro Sistema Operativo comprueba la petición y ve que no tiene en su memoria caché la dirección de ese dominio, entonces realiza la petición al servidor DNS configurado manualmente o mediante DHCP.
 
 . El servidor encargado de la zona de autoridad .com tiene una tabla de datos en los que están almacenados las direcciones IP de las máquinas y sus dominios. Lo busca y le responde al servidor DNS que está almacenado en la máquina con dirección amazon-gw.ip4.tinet.net (77.67.82.130).
 
-. Es entonces cuando el servidor DNS que tenemos configurado realiza una petición a amazon-gw.ip4.tinet.net para saber en qué parte de su máquina (recordad que una máquina puede alojar varias páginas) está www.xatakaon.com
+. Es entonces cuando el servidor DNS que tenemos configurado realiza una petición a amazon-gw.ip4.tinet.net para saber en qué parte de su máquina (una máquina puede alojar varias páginas) está www.xatakaon.com
 
 . El servidor donde está la página alojada busca en su tabla de correspondencias y le responde diciendo que está en la dirección IP 178.236.0.213.
 
@@ -87,6 +87,12 @@ Podemos tener toda la informacion sobre el DNS del Huergo.
 
 Son aquellos ataques dirigidos para afectar o modificar el funcionamiento de un servidor DNS. Los ataques a DNS tienen varias formas, que pueden ocasionar diversas repercusiones según su tipo. Los mas populares son:
 
+#### Ataque DDos/ Dos
+
+Ataque Dos o Denial of service, es un ataque traducido al castellano como Denegacion de servicios, como su nombre indica se encarga de que el servicio corriendo caiga de la red a traves de una masiva entrega de paquetes.
+
+Porque se distingue DDos y Dos, porque en el Dos attack una persona se encarga del envio masivo, en cambio en DDos attack, muchas maquinas, por lo general botnets(red de bots), se encargan de los envios, este ultimo es mas efectivo contra proyectos medianos a grandes, ya que el envio masivo se multiplica por cada maquina y podemos llegar a generar hasta gb de envios con las suficientes maquinas.
+	
 ##### Ataque por Dominio Fantasma
 
 Es un tipo de ataque DDoS que se realiza configurando un grupo de servidores DNS que no responden a las solicitudes o lo hacen lentamente, impidiendo las comunicaciones.
@@ -110,12 +116,6 @@ Las direcciones IP son los "números de habitación" de Internet y habilitan el 
 
 Este procedimiento permite que un atacante consulte sobre algunos dominios especificos en servidores DNS.
 
-##### Ataque DDos/ Dos
-
-Ataque Dos o Denial of service, es un ataque traducido al castellano como Denegacion de servicios, como su nombre indica se encarga de que el servicio corriendo caiga de la red a traves de una masiva entrega de paquetes.
-
-Porque se distingue DDos y Dos, porque en el Dos attack una persona se encarga del envio masivo, en cambio en DDos attack, muchas maquinas, por lo general botnets(red de bots), se encargan de los envios, este ultimo es mas efectivo contra proyectos medianos a grandes, ya que el envio masivo se multiplica por cada maquina y podemos llegar a generar hasta gb de envios con las suficientes maquinas.
-
 ---
 
 ### Proteccion a Ataques DNS
@@ -138,9 +138,7 @@ Utilizar conexiones que sean seguras. A veces nos conectamos a través de redes 
 
 Para evitar que se filtre información personal, datos de nuestra navegación, al navegar por Internet especialmente en redes inseguras podemos utilizar programas VPN. Son muy útiles para preservar en todo momento nuestra privacidad. Las hay para dispositivos móviles y equipos de escritorio. Además podemos usarlas tanto gratuitas como de pago.
 
----
-
-### Tranferencia de Zona
+#### Tranferencia de Zona
 
 Es un tipo de transacción de DNS. Es uno de varios mecanismos disponibles para administradores para replicar bases de datos DNS a través de un conjunto de servidores DNS.
 
@@ -200,4 +198,4 @@ de transferencia de zona dns</A>
 <A HREF="https://www.cs.unc.edu/~fabian/course_papers/cache_snooping.pdf">Dns cache Snoping v2</A>
 
 
-. El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
+El servidor DNS que tenemos configurado tampoco tiene memorizada la dirección IP de ese dominio, por lo que realiza una petición al servidor encargado de la zona de autoridad .com.
