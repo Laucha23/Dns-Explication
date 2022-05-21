@@ -30,7 +30,7 @@ Para entender el proceso de la resolución de DNS, es importante conocer los dif
 
 ### Historia 
 
-El mapeo de las direcciones a nombres de host están gestionados por el Network Information Center (NIC) en un sólo fichero (HOSTS.TXT), el cual fue distribuido a todos los hosts mediante FTP. El ancho de banda de red total consumido en la distribución de este escenario es proporcional al cuadrado del número de hosts en la red. 
+El mapeo de las direcciones a nombres de host estaban gestionados por el Network Information Center (NIC) en un sólo fichero (HOSTS.TXT), el cual fue distribuido a todos los hosts mediante FTP. El ancho de banda de red total consumido en la distribución de este escenario es proporcional al cuadrado del número de hosts en la red. 
 
 Incluso cuando se utilizan múltiples niveles de FTP, la carga de salida FTP en los NIC de los hosts es considerable. No se tuvo una buena previsión del futuro y explosivo crecimiento en el número de hosts.
 
@@ -38,7 +38,7 @@ De la misma manera ocurrió con las redes. Los hosts de la ARPANET original fuer
 
 Al volverse más sofisticadas las aplicaciones en Internet, se creó la necesidad de tener un servicio de nombres de propósito general.
 
-El resultado de esta fueron varias ideas acerca del espacio de nombres y su gestión.Los propósitos cambiaron, pero la idea común era la de un espacio de nombres jerárquico que se correspondiera con la estructura de la organización y del uso del "."  como caracter de unión entre los niveles de la jerarquía.
+El resultado de esta fueron varias ideas acerca del espacio de nombres y su gestión. Los propósitos cambiaron, pero la idea común era la de un espacio de nombres jerárquico que se correspondiera con la estructura de la organización y del uso del "."  como caracter de unión entre los niveles de la jerarquía.
 
 Los términos "dominio" o "nombre de dominio" son utilizados en muchos contextos más allá de lo que DNS describe aquí. El término nombre de dominio se utiliza muy a menudo para referirse a un nombre con una estructura indicada por puntos, sin relación alguna con DNS. Esto se cumple en el direccionamiento de correo electrónico. 
 
