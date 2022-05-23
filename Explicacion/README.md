@@ -116,6 +116,18 @@ Las direcciones IP son los "números de habitación" de Internet y habilitan el 
 
 Este procedimiento permite que un atacante consulte sobre algunos dominios especificos en servidores DNS.
 
+##### Tranferencia de Zona
+
+Es un tipo de transacción de DNS. Es uno de varios mecanismos disponibles para administradores para replicar bases de datos DNS a través de un conjunto de servidores DNS.
+
+Suelen ser utilizados por los atacantes para recolectar información acerca de la infraestructura y subdominios de la posible víctima –aunque existen herramientas automatizadas para hacerlo, como por ejemplo Dnsnum. De esta última vemos una captura de pantalla a continuación:
+
+<img src="dnsenum.jpg">
+
+Puede verse con claridad cómo con solo indicarle unos pocos parámetros (en este caso –enum para enumerar la información) ya comienza con la recolección de información, no solamente de los servidores DNS sino también haciendo búsquedas en Internet. Si bien hace todo por sí sola con solo indicarle el dominio, debe comprenderse cómo funciona por detrás.
+Una transferencia de zona utiliza el protocolo TCP para el transporte, y toma la forma de una transacción de cliente-servidor. El cliente que solicita una transferencia de zona puede ser un servidor esclavo o servidor secundario, que solicita datos de un servidor maestro, a veces llamado un servidor primario. La parte de la base de datos que se replica es una zona.
+Este ataque pretende hacernos pasar por un servidor secundario, solicitar una transferencia de zona, lo que nos permitira visualizar los subdominios de nuestro objetivo.
+	
 ---
 
 ### Proteccion a Ataques DNS
@@ -138,22 +150,10 @@ Utilizar conexiones que sean seguras. A veces nos conectamos a través de redes 
 
 Para evitar que se filtre información personal, datos de nuestra navegación, al navegar por Internet especialmente en redes inseguras podemos utilizar programas VPN. Son muy útiles para preservar en todo momento nuestra privacidad. Las hay para dispositivos móviles y equipos de escritorio. Además podemos usarlas tanto gratuitas como de pago.
 
-#### Tranferencia de Zona
-
-Es un tipo de transacción de DNS. Es uno de varios mecanismos disponibles para administradores para replicar bases de datos DNS a través de un conjunto de servidores DNS.
-
-Suelen ser utilizados por los atacantes para recolectar información acerca de la infraestructura y subdominios de la posible víctima –aunque existen herramientas automatizadas para hacerlo, como por ejemplo Dnsnum. De esta última vemos una captura de pantalla a continuación:
-
-<img src="dnsenum.jpg">
-
-Puede verse con claridad cómo con solo indicarle unos pocos parámetros (en este caso –enum para enumerar la información) ya comienza con la recolección de información, no solamente de los servidores DNS sino también haciendo búsquedas en Internet. Si bien hace todo por sí sola con solo indicarle el dominio, debe comprenderse cómo funciona por detrás.
-Una transferencia de zona utiliza el protocolo TCP para el transporte, y toma la forma de una transacción de cliente-servidor. El cliente que solicita una transferencia de zona puede ser un servidor esclavo o servidor secundario, que solicita datos de un servidor maestro, a veces llamado un servidor primario. La parte de la base de datos que se replica es una zona.
-Este ataque pretende hacernos pasar por un servidor secundario, solicitar una transferencia de zona, lo que nos permitira visualizar los subdominios de nuestro objetivo.
-
 ---
 	
 #### Whois
-	
+
 Whois es un protocolo de consulta y respuesta basado en TCP que se usa comúnmente para proporcionar servicios de información a los usuarios de Internet. Devuelve información sobre los nombres de dominio registrados, un bloque de direcciones IP, servidores de nombres y una gama mucho más amplia de servicios de información.
 
 El sistema whois es una lista de registros que contiene detalles sobre la propiedad de los dominios y los propietarios. La  Corporación de Internet para la Asignación de Nombres y Números (ICANN) regula el registro y la propiedad de los nombres de dominio, pero la lista de registros está en manos de muchas empresas.
@@ -163,11 +163,31 @@ Cualquiera puede consultar la lista de registros. Cuando lo haga, uno de los reg
 Explicacion de terminos:
 
 Registro: Una empresa que administra una lista que contiene un conjunto de nombres de dominio (hay muchos de estos).
-	
 Registrante: El propietario legal del dominio; está registrado a nombre de esta persona.
-	
 Registrador: Un registrante utiliza un registrador para hacer su registro.
-	
+
+#### Whois: Explicacion tecnica
+
+##### Sintaxis
+
+whois [  -h HostName ] [  . |  ! ] [  * ] Name [ . . . ]
+
+##### Descripcion
+
+El comando /usr/bin/whois busca en un directorio de nombres de usuario y muestra información sobre el ID de usuario o el apodo especificado en el parámetro Nombre. El comando whois intenta llegar al host de ARPANET internic.net donde examina una base de datos de nombres de usuario para obtener información.
+
+##### Comandos
+
+. = Fuerza una búsqueda de solo nombre para el nombre especificado en el parámetro Nombre.
+! = Muestra información de ayuda para el apodo de identificador especificado en el parámetro Nombre.
+* = Muestra la lista completa de miembros de un grupo/organización. Si hay muchos miembros, esto puede tiempo.
+? = Solicita ayuda del host ARPANET.
+-h HostName = Especifica un nombre de host alternativo. El nombre de host predeterminado en ARPANET es internic.net. Puede ponerse en contacto con la otra base de datos principal de nombres de usuario de ARPANET, nic.ddn.mil, especificando el indicador -h HostName.
+-H = Suprime la visualización de avisos legales.
+-p Port = Al conectarse, conéctese al puerto de red PORT.
+--verbose = Opera detalladamente.
+--help = Muestra un mensaje de ayuda y sale.
+
 ---
 
 ### Donde se guardan los registros DNS
