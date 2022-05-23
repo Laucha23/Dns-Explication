@@ -179,13 +179,21 @@ El comando /usr/bin/whois busca en un directorio de nombres de usuario y muestra
 ##### Comandos
 
 . = Fuerza una búsqueda de solo nombre para el nombre especificado en el parámetro Nombre.
+	
 ! = Muestra información de ayuda para el apodo de identificador especificado en el parámetro Nombre.
+	
 * = Muestra la lista completa de miembros de un grupo/organización. Si hay muchos miembros, esto puede tiempo.
+	
 ? = Solicita ayuda del host ARPANET.
+	
 -h HostName = Especifica un nombre de host alternativo. El nombre de host predeterminado en ARPANET es internic.net. Puede ponerse en contacto con la otra base de datos principal de nombres de usuario de ARPANET, nic.ddn.mil, especificando el indicador -h HostName.
+	
 -H = Suprime la visualización de avisos legales.
+	
 -p Port = Al conectarse, conéctese al puerto de red PORT.
+	
 --verbose = Opera detalladamente.
+	
 --help = Muestra un mensaje de ayuda y sale.
 
 ---
