@@ -16,6 +16,32 @@ El proceso de solución de DNS supone convertir un nombre de servidor (como www.
 
 Para entender el proceso de la resolución de DNS, es importante conocer los diferentes componentes de hardware por los que debe pasar una consulta de DNS. Para el navegador web, la búsqueda de DNS se produce "en segundo plano" y no requiere ninguna interacción del ordenador del usuario, aparte de la solicitud inicial.
 
+### Direccion IP
+
+Una dirección IP es una representación numérica que identifica una interfaz concreta de manera única en la red. IP significa «protocolo de internet» y describe un conjunto de estándares y requisitos para crear y transmitir paquetes de datos (o datagramas) entre las redes. El protocolo de internet (IP) es parte de la capa de internet del conjunto de protocolos de internet. En el modelo OSI, la IP se consideraría parte de la capa de red. Tradicionalmente, IP se usa junto con un protocolo de nivel superior, de los cuales el más frecuente es TCP. El estándar IP está regido por la especificación RFC 791.
+
+Las direcciones IPv4 tienen una longitud de 32 bits, que permite un máximo de 4 294 967 296 (232) direcciones únicas. Las direcciones IPv6 son de 128 bits, lo que permite 3,4 x 1038 (2128) direcciones únicas (el conjunto total de direcciones utilizables en ambas versiones es menor a causa de una serie de direcciones reservadas y otros aspectos a considerar). Las direcciones IP son números binarios, pero, generalmente, se expresan en forma decimal (IPv4) o hexadecimal (IPv6) para facilitar su lectura y uso por parte de los humanos.
+
+Se ha diseñado el protocolo IP para funcionar en una red dinámica, lo que significa que IP debe operar sin un directorio o monitor central y que no puede depender de la existencia de enlaces o nodos específicos. IP es un protocolo sin conexión orientado a datagramas, por lo tanto, cada paquete debe contener un encabezado con la dirección IP de origen, la de destino y otros datos para poder entregarlo con éxito. Todos estos factores hacen de IP un protocolo no fiable, que consigue entregar los datos con el mejor esfuerzo. La parte de corrección de errores se realiza en otros protocolos de nivel superior, como TCP, que es un protocolo orientado a la conexión, y UDP, que es uno sin conexión.
+
+#### IPv4
+
+Una dirección IPv4 se expresa típicamente en notación decimal con puntos, representando cada ocho bits (octetos) mediante un número del 1 al 255, separando cada octeto por un punto.
+
+Las direcciones IPv4 están compuestas de dos partes. Los primeros números de la dirección indican la red, mientras que los últimos especifican el host concreto. La máscara de subred es lo que indica qué parte de una dirección es la de la red y qué parte se refiere al host específico. Un paquete con una dirección de destino que no se encuentre en la misma red que la dirección de origen se reenviará o enrutará a la red apropiada. Una vez que se encuentre en la red correcta, la parte del host de la dirección determinará a qué interfaz se entrega el paquete.
+
+##### Mascara de Subred
+
+Cada dirección IP identifica una red y una interfaz única en la misma. También se puede escribir la máscara de subred en notación decimal, con puntos, y determina dónde termina la parte de la red y dónde comienza la parte del host de la dirección IP.
+Cuando se expresa en binario, cualquier bit puesto a uno significa que el correspondiente bit en la dirección IP es parte de la dirección de red. Los bits puestos a cero indican los bits correspondientes a parte de la dirección del host en la dirección IP.
+Los bits que marcan la máscara de subred deben ser unos consecutivos. La mayoría de las máscaras de subred comienzan con 255. y continúan hasta que finaliza la máscara de red. Por ejemplo, una máscara de subred de clase C sería 255.255.255.0.
+
+#### IPv6
+
+Las direcciones IPv6 están representadas por ocho conjuntos de cuatro dígitos hexadecimales, y cada conjunto de números está separado por dos puntos.
+Al ser muy largas, se abrevian quitando los ceros iniciales. Ademas, las secciones consecutivas de ceros se pueden abreviar poniendo : (dos puntos).
+
+
 ### Los servidores por los que pasa
 
 1. Recursor de DNS: es como un bibliotecario al que se le pide que busque un libro determinado en la biblioteca. El recursor DNS es un servidor diseñado para recibir consultas desde equipos cliente mediante aplicaciones como navegadores web. Normalmente, el recursor será el responsable de hacer solicitudes adicionales para satisfacer la consulta de DNS del cliente.
